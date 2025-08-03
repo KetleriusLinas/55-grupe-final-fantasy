@@ -1,9 +1,16 @@
+import { BrowserRouter, Routes, Route } from 'react-router';
+import { HomePage } from './pages/public/Home';
+import { PublicLayout } from './templates/PublicLayout';
 
 export function App() {
   return (
-    <>
-      MOVIES CONTENT
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route element={<PublicLayout />} >
+          <Route path='/' index element={<HomePage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
