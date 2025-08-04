@@ -3,7 +3,7 @@ import heroImg from '../../assets/404.png'
 
 export function NotFoundPage() {
     return (
-        <main>
+        <main className="min-page-height">
             <div className="container col-xxl-8 px-4 py-5">
                 <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
                     <div className="col-10 col-sm-8 col-lg-6">
@@ -14,7 +14,7 @@ export function NotFoundPage() {
                         <p className="lead">Page not found!</p>
                         <div className="d-grid gap-2 d-md-flex justify-content-md-start">
 
-                            <Link to="/" className="btn btn-primary btn-lg px-4 me-md-2">Go Home</Link>
+                            <Link to="/" className="btn btn-primary btn-lg px-4 me-md-2">Home</Link>
                         </div>
                     </div>
                 </div>

@@ -1,13 +1,13 @@
 import { PublicPageTitle } from "../../components/PublicPageTitle";
 import { MovieCard } from "../../components/MovieCard";
 
-export function MoviesPage() {
+export function CategoryInnerPage() {
     const moviesData = [
-        {}, {}, {}, {}, {}, {},
+        {}, {},
     ];
     return (
         <main className="min-page-height">
-            <PublicPageTitle title='Movies' />
+            <PublicPageTitle title='{{Category title}}' />
 
             <div className="container">
                 <div className="row">
