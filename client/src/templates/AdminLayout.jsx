@@ -13,8 +13,8 @@ export function AdminLayout() {
                 <div className="row">
                     <Sidebar />
                     <div className='col-md-9 ms-sm-auto col-lg-10 px-md-4'>
-                    </div>
                     <Outlet />
+                    </div>
                 </div>
             </div>
             <div className="container-fluid">
