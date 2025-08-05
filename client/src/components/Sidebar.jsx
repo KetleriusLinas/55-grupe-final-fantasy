@@ -3,12 +3,11 @@ import { Link } from "react-router";
 export function Sidebar() {
     return (
         <div className="sidebar border border-right col-md-3 col-lg-2 p-0 bg-body-tertiary">
-            <div className="offcanvas-md offcanvas-end bg-body-tertiary" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
+            <div className="offcanvas-md offcanvas-end bg-body-tertiary" tabIndex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
                 <div className="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
                     <ul className="nav nav-pills flex-column">
                         <li className="nav-item">
-                            <Link className="nav-link d-flex align-items-center gap-2 
-                            " aria-current="page" href="/admin">
+                            <Link className="nav-link d-flex align-items-center gap-2 " to="/admin">
                                 Dashboard
                             </Link>
                         </li>
@@ -18,26 +17,22 @@ export function Sidebar() {
                     </h6>
                     <ul className="nav nav-pills flex-column">
                         <li className="nav-item">
-                            <Link className="nav-link d-flex align-items-center gap-2 
-                            " to="/admin/movies/new">
+                            <Link className="nav-link d-flex align-items-center gap-2 " to="/admin/movies/new">
                                 New movie
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link d-flex align-items-center gap-2 
-                            " to="/admin/movies">
+                            <Link className="nav-link d-flex align-items-center gap-2 " to="/admin/movies">
                                 All movies
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link d-flex align-items-center gap-2 
-                            " to="/admin/movies/published">
+                            <Link className="nav-link d-flex align-items-center gap-2 " to="/admin/movies/published">
                                 Published movies
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link d-flex align-items-center gap-2 
-                            " to="/admin/movies/draft">
+                            <Link className="nav-link d-flex align-items-center gap-2 " to="/admin/movies/draft">
                                 Draft movies
                             </Link>
                         </li>
@@ -46,28 +41,23 @@ export function Sidebar() {
                         <span>Categories</span>
                     </h6>
                     <ul className="nav nav-pills flex-column">
-
                         <li className="nav-item">
-                            <Link className="nav-link d-flex align-items-center gap-2 
-                            " to="/admin/categories/new">
+                            <Link className="nav-link d-flex align-items-center gap-2 " to="/admin/categories/new">
                                 New category
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link d-flex align-items-center gap-2 
-                            " to="/admin/categories">
+                            <Link className="nav-link d-flex align-items-center gap-2 " to="/admin/categories">
                                 All categories
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link d-flex align-items-center gap-2 
-                            " to="/admin/categories/published">
+                            <Link className="nav-link d-flex align-items-center gap-2 " to="/admin/categories/published">
                                 Published categories
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link d-flex align-items-center gap-2 
-                            " to="/admin/categories/draft">
+                            <Link className="nav-link d-flex align-items-center gap-2 " to="/admin/categories/draft">
                                 Draft categories
                             </Link>
                         </li>
