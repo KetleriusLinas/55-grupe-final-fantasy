@@ -1,6 +1,6 @@
 export function AdminDashboardPage() {
     return (
-        <main className='min-page-height'>
+        <main>
             DASHBARD CONTENT
         </main>
     );
