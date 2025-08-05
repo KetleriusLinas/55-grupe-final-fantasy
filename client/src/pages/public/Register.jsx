@@ -1,5 +1,37 @@
 export function RegisterPage() {
     return (
-        <h1 className="min-page-height">REGISTER PAGE CONTENT</h1>
+        <main className='min-page-height'>
+            <div className="container ">
+                <div className="row">
+                    <h1 className="col-12 display-1 mb-5">Register</h1>
+                </div>
+            </div>
+
+            <div className="container">
+                <div className="row">
+                    <form className="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-4">
+                        <div className="mb-4">
+                            <label htmlFor="username">Username</label>
+                            <input id="username" type="text" className="form-control" required="" />
+                        </div>
+                        <div className="mb-4">
+                            <label htmlFor="email">Email</label>
+                            <input id="email" type="email" className="form-control" required="" />
+                        </div>
+                        <div className="mb-4">
+                            <label htmlFor="password">Password</label>
+                            <input id="password" type="password" className="form-control" required="" />
+                        </div>
+                        <div className="mb-4">
+                            <input className="form-check-input me-2 mt-0" style={{ width: '1.5rem', height: '1.5rem' }} type="checkbox" value="agree" id="tos" required="" />
+                            <label style={{ lineHeight: '1.5rem' }} htmlFor="tos">Sutinku su taisyklemis</label>
+                        </div>
+                        <div className="mb-4">
+                            <button type="submit" className="btn btn-primary w-100 py-2 fs-5">Register</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
     );
 }
