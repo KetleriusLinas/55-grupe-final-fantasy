@@ -8,6 +8,8 @@ import { RegisterPage } from "./pages/public/Register.jsx";
 import { NotFoundPage } from './pages/public/NotFound.jsx';
 import { CategoryInnerPage } from './pages/public/CategoryInner.jsx';
 import { MovieInnerPage } from './pages/public/MovieInner.jsx';
+import { AdminDashboardPage } from './pages/admin/Dashboard.jsx';
+import { AdminLayout } from './templates/AdminLayout.jsx';
 
 export function App() {
   return (
@@ -15,13 +17,20 @@ export function App() {
       <Routes>
         <Route element={<PublicLayout />} >
           <Route path='/' index element={<HomePage />} />
-          <Route path='*' element={<NotFoundPage />} />
           <Route path='/movies' element={<MoviesPage />} />
           <Route path='/movies/:movie' element={<MovieInnerPage />} />
           <Route path='/categories' element={<CategoriesPage />} />
           <Route path='/categories/:category' element={<CategoryInnerPage />} />
           <Route path='/login' element={<LoginPage />} />
           <Route path='/register' element={<RegisterPage />} />
+        </Route>
+
+        <Route element={<AdminLayout />} >
+          <Route path='/admin' element={<AdminDashboardPage />} />
+        </Route>
+
+        <Route element={<PublicLayout />} >
+          <Route path='*' element={<NotFoundPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

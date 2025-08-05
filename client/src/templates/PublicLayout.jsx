@@ -4,9 +4,14 @@ import { Footer } from "../components/Footer";
 export function PublicLayout() {
     return (
         <>
-        <Header />
-        <Outlet />
-        <Footer />
+            <div className="container">
+                <Header />
+            </div>
+
+            <Outlet />
+            <div className="container">
+                <Footer />
+            </div>
         </>
     )
 }
