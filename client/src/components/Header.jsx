@@ -23,7 +23,9 @@ export function Header() {
                 </ul>
                 <div className="col-md-3 text-end">
                     <Link to='/login' className="btn btn-outline-primary me-2">Login</Link>
-                    <Link to='/register' className="btn btn-primary">Register</Link>
+                    <Link to='/register' className="btn btn-primary me-2">Register</Link>
+                    <Link to='/admin' className="btn btn-outline-primary me-2">Dashboard</Link>
+                    <Link to='/logout' className="btn btn-outline-primary">Logout</Link>
                 </div>
             </header>
         </div>
