@@ -22,7 +22,7 @@ export function AdminMoviesTable() {
                             <tbody>
                                 <tr>
                                     <th scope="row">1</th>
-                                    <td><img src="/img/default.png" alt="Movie thumbnail" style={{ maxHeight: '4rem' }} /></td>
+                                    <td><img src="../assets/default.jpg" alt="Movie thumbnail" style={{ maxHeight: '4rem' }} /></td>
                                     <td><Link to="/admin/movies/qwe">qwe</Link></td>
                                     <td><span className="badge text-bg-success">Provided</span></td>
                                     <td></td>
