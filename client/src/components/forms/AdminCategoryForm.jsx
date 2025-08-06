@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-export function AdminCategoryForm() {
-    const [title, setTitle] = useState('');
-    const [url, setUrl] = useState('');
-    const [description, setDescription] = useState('');
-    const [status, setStatus] = useState('draft');
+export function AdminCategoryForm({ category }) {
+    const [title, setTitle] = useState(category?.title ?? '');
+    const [url, setUrl] = useState(category?.url ?? '');
+    const [description, setDescription] = useState(category?.description ?? '');
+    const [status, setStatus] = useState(category?.status ?? 'draft');
 
     function handleFormSubmit(e) {
         e.preventDefault();
@@ -12,7 +12,7 @@ export function AdminCategoryForm() {
         console.log(title);
         console.log(url);
         console.log(description);
-        
+
         fetch('http://localhost:5529/api/admin/categories', {
             method: 'POST',
             headers: {
@@ -25,7 +25,7 @@ export function AdminCategoryForm() {
                 status,
             }),
         })
-            .then (res => res.json())
+            .then(res => res.json())
             .then(data => {
                 console.log(data);
             })
@@ -33,7 +33,7 @@ export function AdminCategoryForm() {
     }
 
     return (
-        <form onSubmit={handleFormSubmit} className="col-12 col-md-9 col-lg-6">
+        <form onSubmit={handleFormSubmit} className="col-12 col-md-9 col-lg-6 mt-5">
             <div className="mb-3">
                 <label htmlFor="title" className="form-label">Title</label>
                 <input onChange={e => setTitle(e.target.value)} value={title} type="text" className="form-control" id="title" required="" />

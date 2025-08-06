@@ -2,13 +2,19 @@ import { AdminPageTitle } from "../../../components/AdminPageTitle";
 import { AdminCategoryForm } from "../../../components/forms/AdminCategoryForm";
 
 export function AdminEditCategoryPage() {
+    const category = {
+        title: 'Action',
+        url: 'action',
+        description: 'Very action, very movie, very very.',
+        status: 'published',
+    };
     return (
         <main>
             <AdminPageTitle title="Edit category" />
 
             <div className="container">
                 <div className="row">
-                    <AdminCategoryForm />
+                    <AdminCategoryForm title={category}/>
                 </div>
             </div>
         </main>
