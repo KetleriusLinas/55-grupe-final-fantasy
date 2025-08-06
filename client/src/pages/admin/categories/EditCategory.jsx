@@ -14,7 +14,7 @@ export function AdminEditCategoryPage() {
 
             <div className="container">
                 <div className="row">
-                    <AdminCategoryForm title={category}/>
+                    <AdminCategoryForm category={category}/>
                 </div>
             </div>
         </main>
