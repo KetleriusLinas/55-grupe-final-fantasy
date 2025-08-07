@@ -4,6 +4,7 @@ import { PublicLayout } from './templates/PublicLayout.jsx';
 import { MoviesPage } from './pages/public/Movies.jsx';
 import { CategoriesPage } from "./pages/public/Categories";
 import { LoginPage } from "./pages/public/Login";
+import { LogoutPage } from "./pages/public/Logout.jsx";
 import { RegisterPage } from "./pages/public/Register.jsx";
 import { NotFoundPage } from './pages/public/NotFound.jsx';
 import { CategoryInnerPage } from './pages/public/CategoryInner.jsx';
@@ -36,6 +37,7 @@ export function App() {
           <Route path='/categories/:category' element={<CategoryInnerPage />} />
           <Route path='/login' element={<LoginPage />} />
           <Route path='/register' element={<RegisterPage />} />
+          <Route path='/logout' element={<LogoutPage />} />
         </Route>
 
         <Route element={<AdminLayout />} >

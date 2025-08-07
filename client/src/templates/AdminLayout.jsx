@@ -3,6 +3,8 @@ import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { Sidebar } from "../components/Sidebar";
 export function AdminLayout() {
+    const isLoggedIn = true;
+
     return (
         <>
             <div className="container-fluid">
@@ -10,10 +12,12 @@ export function AdminLayout() {
             </div>
 
             <div className="container-fluid min-page-height">
+
+                
                 <div className="row">
                     <Sidebar />
                     <div className='col-md-9 ms-sm-auto col-lg-10 px-md-4'>
-                    <Outlet />
+                        <Outlet />
                     </div>
                 </div>
             </div>
