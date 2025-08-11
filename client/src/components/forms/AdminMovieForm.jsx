@@ -12,7 +12,7 @@ export function AdminMovieForm({ movie }) {
     const [releaseDate, setReleaseDate] = useState(movie?.releaseDate ?? '');
     const [rating, setRating] = useState(movie?.rating ?? 50);
     const [status, setStatus] = useState(movie?.status ?? 'draft');
- 
+
     const categories = [
         { id: 1, name: 'Action' },
         { id: 2, name: 'Crime' },
