@@ -22,18 +22,21 @@ export function Header() {
                 </li>
             </ul>
             <div className="col-md-3 text-end">
-            {isLoggedIn ? (
-                <>
-                <Link to='/admin' className="btn btn-primary me-2">Dashboard</Link>
-                <Link to='/logout' className="btn btn-outline-primary">Logout</Link>
-                </>
-            ) : (
-                <>
-                <Link to='/register' className="btn btn-primary me-2">Register</Link>
-                <Link to='/login' className="btn btn-outline-primary me-2">Login</Link>
-                </>
-            )}
+                {isLoggedIn
+                    ? (
+                        <>
+                            <Link to='/admin' className="btn btn-primary me-2">Dashboard</Link>
+                            <Link to='/logout' className="btn btn-outline-primary">Logout</Link>
+                        </>
+                    ) : (
+                        <>
+                            <Link to='/register' className="btn btn-primary me-2">Register</Link>
+                            <Link to='/login' className="btn btn-outline-primary me-2">Login</Link>
+                        </>
+                    )}
             </div>
         </header>
     );
 }
+
+// susitvarkyti deashboard migtukus, ju css kad normaliai tubu responsive
