@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { UserContext } from "./UserContext";
-import { initialUserContext } from "./initialUserContext";
+import { UserContext } from "./UserContext.js";
+import { initialUserContext } from "./initialUserContext.js";
 
 export function UserContextWrapper(props) {
     const [isLoggedIn, setIsLoggedIn] = useState(initialUserContext.isLoggedIn);

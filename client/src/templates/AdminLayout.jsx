@@ -4,8 +4,10 @@ import { Footer } from "../components/Footer";
 import { Sidebar } from "../components/Sidebar";
 import { LoginForm } from "../components/forms/LoginForm";
 import { PublicPageTitle } from "../components/PublicPageTitle";
+import { useContext } from "react";
+import { UserContext } from "../context/user/UserContext.js";
 export function AdminLayout() {
-    const isLoggedIn = false;
+    const { isLoggedIn } = useContext(UserContext);
 
     return (
         <>
