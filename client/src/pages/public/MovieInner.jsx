@@ -13,7 +13,7 @@ export function MovieInnerPage() {
                         <div className="mb-1 text-body-secondary">Duration: 2 hours 26 minutes</div>
                         <div className="mb-1 text-body-secondary">Rating: 5.0 ⭐</div>
                     </div>
-                    <img src={imgUrl} alt="Movie thumbnail" class="col-12 col-lg-4 object-fit-contain" />
+                    <img src={imgUrl} alt="Movie thumbnail" className="col-12 col-lg-4 object-fit-contain" />
                 </div>
             </div>
         </main>

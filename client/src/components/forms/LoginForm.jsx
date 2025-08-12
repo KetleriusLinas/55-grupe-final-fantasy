@@ -7,10 +7,10 @@ export function LoginForm() {
     function handleFormSubmit(e) {
         e.preventDefault();
         login();
+    }
         // login('chuck@norris.lt', 1);
         // navigate('/admin');
         // login (milijonas@jonas12, milijonas@jonas12)
-}
 
         return (
             <form onSubmit={handleFormSubmit} className="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-4">
