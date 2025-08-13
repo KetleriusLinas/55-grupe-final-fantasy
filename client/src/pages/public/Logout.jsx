@@ -1,12 +1,20 @@
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { PublicPageTitle } from "../../components/PublicPageTitle";
 import { useContext } from "react";
 import { UserContext } from "../../context/user/UserContext.js";
 
 export function LogoutPage() {
+    const navigate = useNavigate();
+    const { isLoggedIn, logout } = useContext(UserContext);
 
-    const { isLoggedIn } = useContext(UserContext);
-
+    function handleLogoutClick() {
+        logout();
+        navigate('/');
+        // timeout uzdetas per kiek laiko atjungs nuo sistemos.
+        // setTimeout(() => {
+        //     navigate('/');
+        // }, 3000);
+    }
 
     return (
         <main className='min-page-height'>
@@ -17,7 +25,7 @@ export function LogoutPage() {
                         isLoggedIn
                             ? <div className="col-12">
                                 <p>Ar tikrai norite atsijungti nuo sistemos?</p>
-                                <button className="btn btn-primary">Logout</button>
+                                <button onClick={handleLogoutClick} className="btn btn-primary">Logout</button>
                             </div>
                             :
                             <div className="col-12">
@@ -32,3 +40,5 @@ export function LogoutPage() {
 }
 
 // pasidaryti kelis migtukus taip noriu atsijungti, ne nenoriu ir jei ne nusiunciama atgal i home page.
+
+// pasidaryt kad per laika perjungtu i kita puslapi. Jus perkels per 5s, 4, 3, 2, 1...
