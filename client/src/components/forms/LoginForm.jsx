@@ -12,6 +12,7 @@ export function LoginForm() {
         navigate('/admin');
     }
     // login('chuck@norris.lt', 1);
+    
     // navigate('/admin');
     // login (milijonas@jonas12, milijonas@jonas12)
 
