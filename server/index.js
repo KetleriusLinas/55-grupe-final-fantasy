@@ -1,7 +1,12 @@
 import express from 'express';
+import cors from 'cors';
+
 import { postRegister } from './src/api/public/postRegister.js';
 
 const app = express();
+
+app.use(cors());
+app.use(express.json())
 
 app.get('/', (req, res) => {
     return res.json({
@@ -18,7 +23,7 @@ app.use((err, req, res, next) => {
 });
 
 app.get('*error', (req, res) => {
-        return res.json({
+    return res.json({
         status: 'error',
         message: 'No such route',
     });
