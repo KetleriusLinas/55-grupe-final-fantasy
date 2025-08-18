@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
     });
 });
 
-app.post('api/register', postRegister);
+app.post('/api/register', postRegister);
 
 app.use((err, req, res, next) => {
     console.log(err);

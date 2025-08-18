@@ -1,12 +1,29 @@
-import { useNavigate } from "react-router";
+// import { useNavigate } from "react-router";
 
 export function RegisterForm() {
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
     function handleFormSubmit(e) {
         e.preventDefault();
-        //fetch
-        navigate('/login');
+
+        fetch('http://localhost:5529/api/register', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                username: 'chuck',
+                email: 'chuck',
+                password : 'chuck',
+            }),
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                
+                // navigate('/login');
+            })
+            .catch(console.error);
     }
 
     return (
