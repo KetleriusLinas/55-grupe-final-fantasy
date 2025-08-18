@@ -148,7 +148,7 @@ export class IsValid {
         }
 
         if (text !== 'agree') {
-            return [true, 'Sutikimas turi buti naudojant zodi "agree".'];
+            return [true, 'Privalote sutikti su taisyklemis.'];
         }
 
         return [false, ''];

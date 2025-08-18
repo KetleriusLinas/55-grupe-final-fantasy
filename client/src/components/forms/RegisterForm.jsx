@@ -33,6 +33,8 @@ export function RegisterForm() {
         })
             .then(res => res.json())
             .then(data => {
+
+                // is-valid clase pridede jei pagauna errora. (raudonas sauktukas reg formoj)
                 if (data.status === 'error') {
                     if (data.msg.username) {
                         setUsernameErr(data.msg.username);
