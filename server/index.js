@@ -6,8 +6,12 @@ import { postLogin } from './src/api/public/postLogin.js';
 
 const app = express();
 
-app.use(cors());
-app.use(express.json())
+app.use(express.json());
+//corsas negali buti 'plikas', turi tureti origina .
+app.use(cors({
+    credentials: true,
+    origin: 'http://localhost:5530',
+}));
 
 app.get('/', (req, res) => {
     return res.json({
