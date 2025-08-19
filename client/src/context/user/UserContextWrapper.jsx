@@ -13,6 +13,20 @@ export function UserContextWrapper(props) {
     //     login()
     // }, []);
 
+    useEffect(() => {
+        fetch('http://localhost:5529/api/login', {
+            method: 'GET',
+            credentials: 'include',
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    login(data.user.email, data.user.id);
+                }
+            })
+            .catch(console.error);
+    }, []);
+
     function login(email, userId) {
         setIsLoggedIn(true);
         setRole('admin');
