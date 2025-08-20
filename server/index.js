@@ -4,6 +4,7 @@ import helmet from 'helmet';
 
 import { postRegister } from './src/api/public/postRegister.js';
 import { postLogin } from './src/api/public/postLogin.js';
+import { getLogin } from './src/api/public/getLogin.js';
 
 const app = express();
 
@@ -23,7 +24,9 @@ app.get('/', (req, res) => {
 });
 
 app.post('/api/register', postRegister);
+
 app.post('/api/login', postLogin);
+app.get('/api/login', getLogin);
 
 
 app.use((err, req, res, next) => {
