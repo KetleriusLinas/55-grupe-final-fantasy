@@ -19,6 +19,10 @@
 // }
 
 export function getLogin(req, res) {
+
+    console.log('req.cookies');
+    console.log(req.cookies.loginToken);
+
     return res
         .json({
             status: 'success',
