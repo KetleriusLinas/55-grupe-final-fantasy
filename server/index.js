@@ -5,6 +5,7 @@ import helmet from 'helmet';
 import { postRegister } from './src/api/public/postRegister.js';
 import { postLogin } from './src/api/public/postLogin.js';
 import { getLogin } from './src/api/public/getLogin.js';
+import { cookieParser } from './src/middleware/cookieParser.js';
 
 const app = express();
 
@@ -15,6 +16,8 @@ app.use(cors({
     credentials: true,
     origin: 'http://localhost:5530',
 }));
+
+app.use(cookieParser);
 
 app.get('/', (req, res) => {
     return res.json({
