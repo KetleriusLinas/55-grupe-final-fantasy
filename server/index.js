@@ -6,6 +6,7 @@ import { postRegister } from './src/api/public/postRegister.js';
 import { postLogin } from './src/api/public/postLogin.js';
 import { getLogin } from './src/api/public/getLogin.js';
 import { cookieParser } from './src/middleware/cookieParser.js';
+import { userData } from './src/middleware/userData.js';
 
 const app = express();
 
@@ -17,7 +18,9 @@ app.use(cors({
     origin: 'http://localhost:5530',
 }));
 
+//middleware
 app.use(cookieParser);
+app.use(userData);
 
 app.get('/', (req, res) => {
     return res.json({
